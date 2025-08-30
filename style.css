@@ -1,13 +1,13 @@
 /* --- Base + Theme ---------------------------------------------------- */
 :root {
-  --bg: #fff9fb; /* soft blush background */
+  --bg: #0a1a3c; /* soft blush background */
   --card: #ffffff;
   --text: #2a2421;
   --muted: #6f625c;
 
-  --accent: #2a4d9b; /* royal blue */
-  --accent-2: #f3b9c1; /* blush pink */
-  --ring: #f9d5d3; /* pale blush */
+  --accent: #a12568; /* deep royal rose */
+  --accent-2: #e58ca0; /* strong blush pink */
+  --ring: #f4c2c2; /* soft blush for borders */
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   --radius: 18px;
 }
@@ -32,6 +32,12 @@ body {
   );
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+}
+
+/* Body */
+body {
+  font-family: "Lora", serif;
+  font-weight: 400;
 }
 
 a {
@@ -80,6 +86,20 @@ header.hero {
   margin: 0 0 0.25rem 0;
   text-wrap: balance;
 }
+/* Headings & Names */
+.names,
+h2 {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  color: var(--accent);
+}
+
+/* Body */
+body {
+  font-family: "Lora", serif;
+  font-weight: 400;
+}
+
 .amp {
   color: var(--accent);
   font-weight: 700;
