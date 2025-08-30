@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jerome & Krizel — Wedding RSVP</title>
+    <meta
+      name="description"
+      content="Wedding website and RSVP for Jerome & Krizel."
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <audio id="wedding-music" autoplay loop muted>
+      <source src="music.mp3" type="audio/mpeg" />
+    </audio>
+
+    <div
+      id="unmute-overlay"
+      style="
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        font-family: sans-serif;
+        font-size: 1.2rem;
+        cursor: pointer;
+        z-index: 9999;
+      "
+    >
+      💌 “Jerome & Krizel personally requested you tap this. Don’t let them down
+      😏”
+    </div>
+
+    <header class="hero">
+      <div class="container">
+        <div class="hero-card">
+          <h1 class="names">Jerome <span class="amp">&amp;</span> Krizel</h1>
+          <div class="date-venue">
+            Saturday, December 7, 2025 • Manila Cathedral
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section>
+        <div class="split">
+          <div class="card">
+            <div class="section-title">
+              <h2>RSVP</h2>
+              <span class="pill">Kindly respond by Nov 10</span>
+            </div>
+            <p>
+              Please let us know if you can celebrate with us. If you received
+              an invitation with a guest name, kindly RSVP for each person.
+            </p>
+
+            <!--
+            Replace YOUR_GOOGLE_FORM_URL below with the responder link that ends with /viewform
+            Example: https://docs.google.com/forms/d/e/XXXX/viewform
+          -->
+            <div class="form-embed" role="region" aria-label="RSVP Form">
+              <iframe title="RSVP Form" src="YOUR_GOOGLE_FORM_URL"></iframe>
+            </div>
+            <p class="form-alt">
+              If the form does not load,
+              <a href="YOUR_GOOGLE_FORM_URL" target="_blank" rel="noopener"
+                >open it in a new tab</a
+              >.
+            </p>
+          </div>
+
+          <aside class="card">
+            <h2>Details</h2>
+            <ul class="clean">
+              <li><strong>Ceremony:</strong> 2:00 PM — Manila Cathedral</li>
+              <li><strong>Reception:</strong> 5:00 PM — Palacio de Memoria</li>
+              <li><strong>Attire:</strong> Formal • Neutral tones</li>
+              <li>
+                <strong>Contact:</strong>
+                <a href="mailto:wedding@email.com">wedding@email.com</a>
+              </li>
+            </ul>
+            <div
+              style="
+                margin-top: 1rem;
+                display: flex;
+                gap: 0.5rem;
+                flex-wrap: wrap;
+              "
+            >
+              <a class="btn" href="#map">Open Map</a>
+              <a class="btn outline" href="#faq">FAQ</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section>
+        <div class="card">
+          <h2 id="schedule">Schedule</h2>
+          <ul class="clean">
+            <li><strong>1:00 PM</strong> — Guests arrive</li>
+            <li><strong>2:00 PM</strong> — Ceremony begins</li>
+            <li><strong>3:30 PM</strong> — Photos & travel to reception</li>
+            <li><strong>5:00 PM</strong> — Dinner & program</li>
+            <li><strong>8:30 PM</strong> — Dancing</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div class="card">
+          <h2>Gallery</h2>
+          <div class="gallery" aria-label="Photo gallery">
+            <img
+              src="https://images.unsplash.com/photo-1460364157752-926555421a7e?q=80&w=600&auto=format&fit=crop"
+              alt="Rings"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=600&auto=format&fit=crop"
+              alt="Bouquet"
+            />
+            <img
+              src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=600&auto=format&fit=crop"
+              alt="Table setup"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="faq">
+        <div class="card">
+          <h2>FAQ</h2>
+          <p>
+            <strong>Can I bring a guest?</strong> Please refer to your
+            invitation details. If a guest is named, kindly RSVP for them as
+            well.
+          </p>
+          <p>
+            <strong>Is there parking?</strong> Yes, on-site parking is available
+            at both venues.
+          </p>
+          <p>
+            <strong>How do I secure a spot?</strong> Kindly RSVP through our
+            form
+            <a
+              href="https://docs.google.com/forms/d/1vou3Al_YLxQuIvI_mLLTqHxfiM4ua23j57fioW9BG88/edit"
+              target="_blank"
+              rel="noopener"
+              >here</a
+            >.
+          </p>
+          <div style="margin-top: 1rem; text-align: center">
+            <a
+              class="btn"
+              href="https://docs.google.com/forms/d/1vou3Al_YLxQuIvI_mLLTqHxfiM4ua23j57fioW9BG88/edit"
+              target="_blank"
+              rel="noopener"
+            >
+              RSVP Now
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>With love, Jerome & Krizel • #JKFinally</p>
+      </div>
+    </footer>
+
+    <script>
+      const overlay = document.getElementById("unmute-overlay");
+      const audio = document.getElementById("wedding-music");
+
+      overlay.addEventListener("click", () => {
+        audio.muted = false;
+        audio.play().catch(() => {});
+        overlay.style.display = "none";
+      });
+    </script>
+  </body>
+</html>

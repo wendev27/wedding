@@ -1,0 +1,235 @@
+/* --- Base + Theme ---------------------------------------------------- */
+:root {
+  --bg: #fff9fb; /* soft blush background */
+  --card: #ffffff;
+  --text: #2a2421;
+  --muted: #6f625c;
+
+  --accent: #2a4d9b; /* royal blue */
+  --accent-2: #f3b9c1; /* blush pink */
+  --ring: #f9d5d3; /* pale blush */
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --radius: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--text);
+  background: radial-gradient(
+    1200px 600px at 70% -20%,
+    #fff 0%,
+    var(--bg) 60%,
+    var(--bg) 100%
+  );
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  width: min(100% - 2rem, 980px);
+  margin-inline: auto;
+}
+
+/* --- Header / Hero --------------------------------------------------- */
+header.hero {
+  position: relative;
+  padding: clamp(2.5rem, 6vw, 5rem) 0;
+  overflow: clip;
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 249, 251, 0.9) 65%
+    ),
+    url("https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop")
+      center/cover no-repeat;
+  border-bottom: 1px solid #f9d5d3;
+}
+
+.hero-card {
+  background: color-mix(in srgb, var(--card) 92%, transparent);
+  border: 1px solid var(--ring);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: clamp(1.25rem, 3vw, 2rem);
+  backdrop-filter: blur(3px);
+}
+
+.names {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.2;
+  margin: 0 0 0.25rem 0;
+  text-wrap: balance;
+}
+.amp {
+  color: var(--accent);
+  font-weight: 700;
+}
+.date-venue {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+/* --- Sections -------------------------------------------------------- */
+section {
+  padding: clamp(1.75rem, 4.5vw, 3rem) 0;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--ring);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: clamp(1.25rem, 3vw, 2rem);
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+@media (min-width: 760px) {
+  .split {
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: start;
+  }
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+  margin: 0 0 0.75rem 0;
+  color: var(--accent);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #fff7f9;
+  border: 1px dashed var(--accent-2);
+  color: var(--accent);
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+ul.clean {
+  list-style: none;
+  padding: 0;
+  margin: 0.25rem 0 0 0;
+}
+ul.clean li {
+  padding: 0.3rem 0;
+}
+
+/* --- RSVP embed ------------------------------------------------------ */
+.form-embed {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 900px;
+  border: 1px solid var(--ring);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #fff;
+}
+.form-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.form-alt {
+  text-align: center;
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+}
+
+/* --- Gallery --------------------------------------------------------- */
+.gallery {
+  display: grid;
+  gap: 0.6rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+.gallery img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+@media (max-width: 640px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gallery img {
+    height: 140px;
+  }
+}
+
+/* --- Footer ---------------------------------------------------------- */
+footer {
+  padding: 2rem 0 3rem;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* --- Buttons --------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--accent);
+  color: var(--card);
+  background: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: var(--shadow);
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+.btn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+  text-decoration: none;
+}
+.btn.outline {
+  background: transparent;
+  color: var(--accent);
+}
+
+.section-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+p,
+li,
+.date-venue {
+  text-wrap: pretty;
+}
